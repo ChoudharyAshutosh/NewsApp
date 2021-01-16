@@ -1,0 +1,25 @@
+p{
+    width: 50%;
+}
+.heading-section{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6%;
+}
+.heading-section > p:nth-child(1){
+    direction: ltr;
+    margin: 0%;
+}
+.heading-section > p:nth-child(2){
+    direction: rtl;
+    margin: 0%;
+}
+.filter-section{
+    padding:6% 6%;
+    border:1px solid lightgrey;
+}
+hr{
+    height: 1px;
+    background-color: lightgrey;
+    border:none;
+}
