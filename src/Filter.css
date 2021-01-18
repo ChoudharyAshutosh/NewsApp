@@ -9,14 +9,20 @@ p{
 .heading-section > p:nth-child(1){
     direction: ltr;
     margin: 0%;
+    font-size: 95%;
 }
 .heading-section > p:nth-child(2){
     direction: rtl;
     margin: 0%;
+    font-size: 85%;
+    color: blue;
 }
 .filter-section{
+    width:100%;
+    background-color: white;
     padding:6% 6%;
     border:1px solid lightgrey;
+    font-family: 'Times New Roman', Times, serif;
 }
 hr{
     height: 1px;
@@ -27,25 +33,41 @@ div > label,div > input[type='date']{
     width: 87.5%;
     display: block;
     height: 80%;
+    color: #4e4a4a;
+    font-weight: bold;
     padding:2%;
 }
 div> input[type='date']{
     margin-bottom: 5%;
     padding: 2.5%;
+    width: 93%;
+    border-radius: 8px;
+    border-color: lightgray;
+    border:1%;
 }
+@-moz-document{
+    .div> input[type='date'] {
+        margin-bottom: 5%;
+        padding: 2.5%;
+        width: initial;
+    }
+}
+
 div > select{
     padding: 1.5%;
     margin-bottom: 5%;
     border-radius: 8px;
     outline: none;
+    font-size: 100%;
+    padding: 2%;
     background-color: lightgray;
     width: 100%;
+    font-family: 'Times New Roman', Times, serif;
 }
 select {
     padding: 0.5%;
     -webkit-appearance: none;
     appearance: none;
-    
 }
 label{
     text-transform: uppercase;
@@ -53,11 +75,12 @@ label{
 .search-button{
     margin-top: 5%;
     width: 100%;
-    padding:4% 5%;
+    padding:4%;
     font-size: 105%;
     background-color: #262626;
     color:white;
     border:none;
+    font-family: none;
     font-weight: bolder;
     text-decoration:none;
     border-radius: 5px;
