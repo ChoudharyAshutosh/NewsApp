@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress'
+import CircularProgress from '@material-ui/core/CircularProgress';
 import './News.css';
 class News extends Component{
     //Defining Funtion for Deleting Article
@@ -59,8 +59,8 @@ class News extends Component{
                                     <div className='close' id={article.id+'$$'} onClick={this.hideComponent}>&#10005;</div>
                                     <div className='news-section'>
                                         <p className='heading'>{article.title}</p>
-                                        <div>
-                                            <span className='author-section'>{article.author}</span>
+                                        <div className='news-section-non-image'>
+                                            <span className='author-section-non-image'>{article.author}</span>
                                             <span className='date-section'>{article.published}</span>
                                         </div>
                                         <div className='content-non-image'>{article.description}</div>
@@ -75,12 +75,10 @@ class News extends Component{
     }
     render(){
         return(
-            <div className='list'>
+            <div className='list' id='list'>
             {   //Dynamically Rendering Articles
                 this.show(this.props.data)
-                
             }
-                
             </div>
         );
     }

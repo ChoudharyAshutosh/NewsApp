@@ -18,6 +18,7 @@ class Show extends Component {
     }
     //Fetching Data From API on Click of Refresh Button
     latestNews=()=>{
+      this.setState({news:''})
         let url='https://api.currentsapi.services/v1/latest-news?language=en&apiKey=Sv5WCDKkRqAXHelrXYSyRrxs0HBqwf_OrVZLLjSstKJprUzb';
         axios.get(url).then((response)=>{
           this.setState({'news':response.data.news})

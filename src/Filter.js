@@ -29,9 +29,9 @@ class Filter extends Component{
             flag=true;
         else if(data.language!=='')
             flag=true;
-        else if(data.start_date!=='')
+        else if(data.start_date!=="T00:00:00+00:00")
             flag=true;
-        else if(data.end_date!=='')
+        else if(data.end_date!=="T00:00:00+00:00")
             flag=true;  
         if(flag===true){
             this.props.send(data);
@@ -47,7 +47,7 @@ class Filter extends Component{
                     <p className='reset' onClick={this.resetValues}>Reset</p>
                 </div>
                 <hr/>
-                <div >
+                <div>
                     <label>language</label>
                     <select id='language-chosen' defaultValue='' name='language'>
                         <option value="">Select</option>
