@@ -2,21 +2,24 @@ import React, {Component} from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress'
 import './News.css';
 class News extends Component{
+    //Defining Funtion for Deleting Article
     hideComponent=(event)=>{
         let d=event.target.id.split('$$')
         console.log(d)
         document.getElementById(d[0]).style.display='none';
     }
-
+    //Rendering News
     show=(article)=>{
         if(!article)
             return(
+                //Setting Progress Bar
                 <div className='loading-bar-container'>
                     <CircularProgress className='progress-size' />
                 </div>
             )
         else if(article==='#')
             return(
+                //Handling Not Founding Data 
                 <div className='loading-bar-container'>
                 <h2>Data Not Found</h2>
             </div>
@@ -25,6 +28,7 @@ class News extends Component{
             return  article.map(article=>{
                         if(article.image!=='None')
                             return(
+                                //Rendering Image contained Articles
                                 <div className='news-container' key={article.id} id={article.id}>
                                     <div className='close' id={article.id+'$$'} onClick={this.hideComponent}>&#10005;</div>
                                     <div className='news-section'>
@@ -50,6 +54,7 @@ class News extends Component{
                             )
                         else
                             return(
+                                //Rendering Non-Image Articles
                                 <div className='news-container' key={article.id} id={article.id}>
                                     <div className='close' id={article.id+'$$'} onClick={this.hideComponent}>&#10005;</div>
                                     <div className='news-section'>
@@ -71,7 +76,8 @@ class News extends Component{
     render(){
         return(
             <div className='list'>
-            {   this.show(this.props.data)
+            {   //Dynamically Rendering Articles
+                this.show(this.props.data)
                 
             }
                 

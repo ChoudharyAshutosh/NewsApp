@@ -1,30 +1,29 @@
 import React, {Component} from 'react';
-import './App.css';
 import axios from 'axios';
 import Filter from './Filter';
 import News from './News';
-class App extends Component {
+import './Show.css';
+class Show extends Component {
     constructor(props){
         super(props);
-        this.state={
-          isLoading:1,
-        }
+        this.state={}
       
     }
+    //Fetching Data From API on Load
     componentDidMount(){
         let url='https://api.currentsapi.services/v1/latest-news?language=en&apiKey=Sv5WCDKkRqAXHelrXYSyRrxs0HBqwf_OrVZLLjSstKJprUzb';
         axios.get(url).then((response)=>{
           this.setState({'news':response.data.news})
         })
     }
-
+    //Fetching Data From API on Click of Refresh Button
     latestNews=()=>{
         let url='https://api.currentsapi.services/v1/latest-news?language=en&apiKey=Sv5WCDKkRqAXHelrXYSyRrxs0HBqwf_OrVZLLjSstKJprUzb';
         axios.get(url).then((response)=>{
           this.setState({'news':response.data.news})
         })
     }
-
+    //Fetching Data From API on Filtered Search
     sendRequest=(news)=>{
         this.setState({news:''})
         let url='https://api.currentsapi.services/v1/latest-news?';
@@ -49,13 +48,22 @@ class App extends Component {
           <div className='view'>
             <div className='box'>
               <div className='latest-search-pannel'>
+                {/* 
+                  Rendering Latest News button
+                 */}
                   <button className='latest-search-button' onClick={this.latestNews}>Show Latest News</button>
               </div>
               <div className='container'>
                 <div className='search-filter'>
+                  {/* 
+                    Rendering Filter Component
+                 */}
                   <Filter send={this.sendRequest}/>
                 </div>
                 <div className='news-pannel'>
+                  {/* 
+                    Rendering News Component and Passing State for Rendering of Data
+                 */}
                   <News data={this.state.news}/>
                 </div>
               </div>
@@ -65,4 +73,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Show;

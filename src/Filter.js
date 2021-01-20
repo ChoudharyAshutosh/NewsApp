@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import './Filter.css';
 class Filter extends Component{
+    //Defining Function for Resetting Filter Section
     resetValues=()=>{
         let country=document.getElementById('country-chosen');
         let language=document.getElementById('language-chosen');
@@ -11,6 +12,7 @@ class Filter extends Component{
         start_date.value='';
         end_date.value='';
     }
+    //Defining Function for Getting Data from Filter Section and Passing to Show Component
     setAttributes=()=>{
         let country=document.getElementById('country-chosen');
         let language=document.getElementById('language-chosen');
@@ -37,6 +39,7 @@ class Filter extends Component{
     }
 
     render(){
+        //Rendering Filter Component Parts
         return(
             <div className='filter-section'>
                 <div className='heading-section'>
