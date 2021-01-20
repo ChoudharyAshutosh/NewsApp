@@ -21,7 +21,7 @@ class News extends Component{
             return(
                 //Handling Not Founding Data 
                 <div className='loading-bar-container'>
-                <h2>Data Not Found</h2>
+                <h2>News Not Found</h2>
             </div>
             )
         else
