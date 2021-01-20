@@ -54,7 +54,7 @@ div> input[type='date']{
 }
 
 div > select{
-    padding: 1.5%;
+    padding: 2%;
     margin-bottom: 5%;
     border-radius: 8px;
     outline: none;
@@ -65,7 +65,6 @@ div > select{
     font-family: 'Times New Roman', Times, serif;
 }
 select {
-    padding: 0.5%;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -86,4 +85,7 @@ label{
     border-radius: 5px;
     cursor:pointer;
     outline: none;
+}
+.reset{
+    cursor: pointer;
 }
