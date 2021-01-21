@@ -46,7 +46,6 @@ class Show extends Component {
         }
         if(news.country!=='' ){
           url=url+`country=${news.country}&`;
-          
         }
         if(news.language!=='')
         url=url+`language=${news.language}&`;
