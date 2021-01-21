@@ -27,13 +27,13 @@ class Show extends Component {
     //Fetching Data From API on Filtered Search
     sendRequest=(news)=>{
         this.setState({news:''})
-        let url='https://api.currentsapi.services/v1/latest-news?';
+        let url='https://api.currentsapi.services/v1/search?';
         if(news.country!=='')
         url=url+`country=${news.country}&`;
         if(news.language!=='')
         url=url+`language=${news.language}&`;
         if(news.start_date!=='')
-        url=url+`start_date=${news.language}&`;
+        url=url+`start_date=${news.start_date}&`;
         if(news.end_date!=='')
         url=url+`end_date=${news.end_date}&`;
         url=url+'apiKey=Sv5WCDKkRqAXHelrXYSyRrxs0HBqwf_OrVZLLjSstKJprUzb';
