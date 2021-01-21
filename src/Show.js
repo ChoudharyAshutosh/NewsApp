@@ -39,9 +39,15 @@ class Show extends Component {
     //Fetching Data From API on Filtered Search
     sendRequest=(news)=>{
         this.setState({news:''})
-        let url='https://api.currentsapi.services/v1/search?';
-        if(news.country!=='')
-        url=url+`country=${news.country}&`;
+        let url='https://api.currentsapi.services/v1/latest-news?';
+        let url2='https://api.currentsapi.services/v1/search?';
+        if(news.start_date!=='T00:00:00+00:00' || news.end_date!=='T00:00:00+00:00'){
+          url=url2;
+        }
+        if(news.country!=='' ){
+          url=url+`country=${news.country}&`;
+          
+        }
         if(news.language!=='')
         url=url+`language=${news.language}&`;
         if(news.start_date!=='')
