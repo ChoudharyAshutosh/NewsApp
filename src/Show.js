@@ -23,7 +23,18 @@ class Show extends Component {
         axios.get(url).then((response)=>{
           this.setState({'news':response.data.news})
         })
+      this.resetValues();
     }
+    resetValues=()=>{
+      let country=document.getElementById('country-chosen');
+      let language=document.getElementById('language-chosen');
+      let start_date=document.getElementById('start_date');
+      let end_date=document.getElementById('end_date');
+      country.value='';
+      language.value='';
+      start_date.value='';
+      end_date.value='';
+  }
     //Fetching Data From API on Filtered Search
     sendRequest=(news)=>{
         this.setState({news:''})
