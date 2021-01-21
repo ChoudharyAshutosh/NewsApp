@@ -25,6 +25,7 @@ class Show extends Component {
         })
       this.resetValues();
     }
+    //Defining Function for Resetting Filter Section
     resetValues=()=>{
       let country=document.getElementById('country-chosen');
       let language=document.getElementById('language-chosen');
