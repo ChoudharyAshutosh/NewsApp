@@ -34,7 +34,7 @@
     padding: 0px;
     height: 100vh;
     overflow: hidden;
-    font-family: none;
+    font-family: sans-serif !important;
 }
 .box{
     flex: 1;

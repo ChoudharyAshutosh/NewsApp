@@ -39,7 +39,7 @@ class News extends Component{
                                         </div>
                                         <div className='news'>
                                             <div className='news-image'>
-                                                <img height='140px' width='150px' src={article.image} alt={article.image}/>
+                                                <img height='140px' width='150px' src={article.image} alt=''/>
                                             </div>
                                             <div className='news-content'>
                                                 <div className='content'>{article.description}</div>

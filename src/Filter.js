@@ -5,8 +5,8 @@ class Filter extends Component{
     resetValues=()=>{
         let country=document.getElementById('country-chosen');
         let language=document.getElementById('language-chosen');
-        let start_date=document.getElementById('country-chosen');
-        let end_date=document.getElementById('country-chosen');
+        let start_date=document.getElementById('start_date');
+        let end_date=document.getElementById('end_date');
         country.value='';
         language.value='';
         start_date.value='';
@@ -58,7 +58,6 @@ class Filter extends Component{
                         <option value="fi">Finnish</option>
                         <option value="fr">French</option>
                         <option value="de">German</option>
-                        <option value="hi">Hindi</option>
                         <option value="it">Italian</option>
                         <option value="ja">Japenese</option>
                         <option value="ko">Korean</option>
